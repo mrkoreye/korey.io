@@ -41,7 +41,6 @@ $(function() {
 	$('#messages').text("Press Spacebar to start/restart");
 	
 	$(document).keydown(function (e) {
-		
 	  var keyCode = e.keyCode;
 
 		if([32, 37, 38, 39, 40].indexOf(keyCode) > -1) {
@@ -70,17 +69,17 @@ $(function() {
 	});
 	
 
-		play = function () {
-			Game = new Snakey.Game();
-			createGrid();
-			timer = window.setInterval(function() {
-				Game.step();
-				if(Game.snake.hitSelf() || Game.snake.offBoard()) {
-					clearInterval(timer);
-				} else {
-					renderSnake();
-				}
-							}, 100);
+	play = function () {
+		Game = new Snakey.Game();
+		createGrid();
+		timer = window.setInterval(function() {
+			Game.step();
+			if(Game.snake.hitSelf() || Game.snake.offBoard()) {
+				clearInterval(timer);
+			} else {
+				renderSnake();
+			}
+		}, 100);
 	 }; 
 
 });

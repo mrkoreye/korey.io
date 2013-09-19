@@ -109,7 +109,9 @@ Snakey.Board = (function () {
 		for(var i = 0, len = snake.snake.length; i < len; i ++) {
 			var row = snake.snake[i][0];
 			var col = snake.snake[i][1];
-			this.board[row][col] = "snake";
+			if (row <= 29 && row >= 0) {
+				this.board[row][col] = "snake";	
+			}
 		}
 	}
 	
@@ -153,13 +155,9 @@ Snakey.Game = (function () {
 	
 	Game.prototype.step = function () {
 		this.snake.step();
-		// if(this.snake.hitSelf() || this.snake.offBoard()) {
-// 			clearInterval(timer);
-// 		};
 		this.addApple();
 		this.eatApple();
 		this.board.update(this.snake);
-		
 	}
 	
 	Game.prototype.addApple = function() {
@@ -176,11 +174,13 @@ Snakey.Game = (function () {
 	Game.prototype.eatApple = function() {
 		var snakeR = this.snake.head[0];
 		var snakeC = this.snake.head[1];
-		if(this.board.board[snakeR][snakeC] == "apple") {
+		if (this.board.board[snakeR] == undefined) {
+			clearInterval(timer); 
+		} else if(this.board.board[snakeR][snakeC] == "apple") {
 			this.points += 1;
 			this.board.board[snakeR][snakeC] = "snake";
 			this.snake.biggerSnake();
-		};
+		} 
 	}
 	
 	return Game;
