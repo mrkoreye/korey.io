@@ -2,6 +2,10 @@
 	padding-top: 15px;
 }*/
 
+.invisible {
+	display: none;
+}
+
 .row-gray {
 	background-color: #F0FFFF ;
 }
@@ -13,4 +17,29 @@
   border-radius: 0;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
           box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+#geocities-button {
+	position: relative;
+	margin-top: 30px;
+	
+	padding-top: 0px;
+	padding-right: 10px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+	z-index: 100;
+	
+	background-color: #FFFF00;
+	border-radius: 0px;
+
+	height: 27px;
+	font-weight: bold;
+
+	font-size: 14px;
+	cursor: pointer;
+}
+
+#geocities-button:hover {
+	background-color: #f6ef2a;
+	border-color: #f6ef2a;
 }
