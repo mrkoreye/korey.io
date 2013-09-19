@@ -30,7 +30,7 @@
 	padding-left: 10px;
 	z-index: 100;
 	
-	background-color: #FFFF00;
+	background-color: #F0FFFF;
 	border-radius: 0px;
 
 	height: 27px;
@@ -41,6 +41,6 @@
 }
 
 #geocities-button:hover {
-	background-color: #f6ef2a;
-	border-color: #f6ef2a;
+	background-color: #FFFF00;
+	border-color: #FFFF00;
 }
