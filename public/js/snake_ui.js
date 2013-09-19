@@ -1,7 +1,9 @@
 $(function() {
 	Game = new Snakey.Game();
+	timer = '';
 	
 	function createGrid() {
+		$('.master').html('');
 		var across = 30;
 		var down = 30;
 		for (var j = 0; j < across; j++) {
@@ -36,7 +38,7 @@ $(function() {
 	}
 
 	createGrid();
-	$('#messages').text("Click here to Start. Spacebar to Restart");
+	$('#messages').text("Press Spacebar to start/restart");
 	
 	$(document).keydown(function (e) {
 		
@@ -48,7 +50,10 @@ $(function() {
 
 	  switch (keyCode) {
 			case 32:
-				Game = new Snakey.Game();
+				if(timer != '') {
+					clearInterval(timer);
+				}
+				play();
 	    case 37:
 	      Game.snake.turn("up");
 	    	break;
@@ -61,12 +66,13 @@ $(function() {
 	    case 40:
 	      Game.snake.turn("right");
 	    	break;
-			case  32:
-				
 	  }
 	});
 	
-	$('#messages').one("click", function () {
+
+		play = function () {
+			Game = new Snakey.Game();
+			createGrid();
 			timer = window.setInterval(function() {
 				Game.step();
 				if(Game.snake.hitSelf() || Game.snake.offBoard()) {
@@ -75,11 +81,6 @@ $(function() {
 					renderSnake();
 				}
 							}, 100);
-					} 
-	 );
-	
-	
-  
-
+	 }; 
 
 });
