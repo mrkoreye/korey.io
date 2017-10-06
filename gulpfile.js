@@ -81,7 +81,7 @@ gulp.task('postcss', function() {
 
 gulp.task('js', function() {
   return gulp.src('src/**/*.js')
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(gulp.dest('build'));
 });
 

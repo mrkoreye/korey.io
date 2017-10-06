@@ -3,35 +3,171 @@
     class="blurb-container">
     <h1 class="name">Hi there, my name is Korey.</h1>
     <p>
-      I'm a software engineer with that mostly does front-end web development. 
+      I'm a software engineer that mostly does front-end web development. 
       I also mix and record music, mostly while playing mandolin with <a href="http://thecreak.net">The Creak</a>. 
       Check out <a href="http://github.com/mrkoreye">Github</a> to dive straight into some code, or visit <a href="http://www.linkedin.com/in/korey-kassir-48876463">LinkedIn</a> for details on my work history.
     </p>
   </div>
 </div>
-<div class="projects-container block">
+<div class="projects-container block bottom-border">
   <h3 class="projects-header">Projects</h3>
   <div class="project collective">
     <span class="title">SHOPSTYLE COLLECTIVE</span>
+    <div class="details">
+      <div class="close-details">&#x2715;</div>
+      <div class="details-title">SHOPSTYLE COLLECTIVE</div>
+      <p>
+        I worked for ShopStyle, a fashion search engine, for 3.5 years. During my time there I ended up as the tech lead for the 
+        ShopStyle Collective product, an affiliate program that helps thousands of influencers monetize their blogs and social networks.
+        My team and I built and maintained a hybrid mobile app, an angular app for the web, and some embeddable 'widgets' that influencers
+        could place on their blogs to get paid when people clicked.
+        Check out some of the features like analytics and look creation in the video below.
+      </p>
+      <p>
+        Technologies used: Angular, D3.js, Coffeescript, Typescript, Ionic, Cordova, Grunt, Gulp, Webpack, HTML, CSS
+      </p>
+      <div class="video-container">
+        <iframe 
+          class="video-element"
+          src="https://www.youtube.com/embed/T9ozMnhDmAY?loop=1&rel=0"
+          frameborder="0" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
   </div>
   <div class="project metronomnom">
     <span class="title">METRONOMNOM</span>
+    <div class="details">
+      <div class="close-details">&#x2715;</div>
+      <div class="details-title">METRONOMNOM</div>
+      <p>
+        The metronome for the hungry, on the go musician. I jumped head first into this one to learn more about React and the web audio context.
+        It's a metronome that has a few different click sounds, lets you accent the first beat, change time signatures, and adjust the volume.
+        All while you get to watch a cartoon cookie get eaten - what else could you need :P
+      </p>
+      <p>
+        <a href="http://metronomnom.korey.io">Check it out live!</a>
+      </p>
+      <p>
+        <a href="http://github.com/mrkoreye/metronomnom">Code Plz</a>
+      </p>
+      <p>
+        Technologies used: Reactjs, Javascript (ES6), Web Audio API
+      </p>
+    </div>
   </div>  
+  <div class="project wrangler">
+    <span class="title">WRANGLER</span>
+    <div class="details">
+      <div class="close-details">&#x2715;</div>
+      <div class="details-title">WRANGLER</div>
+      <p>
+        Wrangler first started as a little side project of mine but then blossomed into one of the main testing tool for ShopStyle and POPSUGAR.
+        The idea for Wrangler came about when I was frustrated with the current manual testing setup we had - a bunch of excel docs.
+        Wrangler gets ticket and fix version data from the Jira API, then puts it all together in a place where people can easily see what they need to test.
+        People write test plans in the Jira ticket, and whoever gets assigned that ticket goes through the steps and passes or fails the test plan.
+        Tickets can have multiple test plans, minimum numbers of testers, and there is logic to make sure people get assigned randomly but not to their own ticket.
+        Meteor was an idea choice because it is built with real time in mind, so as people are testing it updates everyone's browser.
+        The video below demonstrates the basic flow of test setup by an admin and testing by a user, and the beloved little reward of a gif when you complete all tests.
+      </p>
+      <p>
+        <a href="http://github.com/shopstyle/wrangler">Code Plz</a>
+      </p>
+      <p>
+        Technologies used: Meteor.js, MongoDB, Javascript, HTML, CSS
+      </p>
+      <div class="video-container">
+        <iframe 
+          class="video-element"
+          src="https://www.youtube.com/embed/6Ky-GO_oRLk?loop=1&rel=0"
+          frameborder="0" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
   <div class="project flower">
     <span class="title">THE CREAK</span>
-  </div>  
-  <div class="project">
-    <span class="title">WRANGLER</span>
+    <div class="details">
+      <div class="close-details">&#x2715;</div>
+      <div class="details-title">THE CREAK (website)</div>
+      <p>
+        I wanted my band's website to be super simple, load fast, and get straight to the point. 
+        I also chose to take inpiration from the <a href="http://brutalistwebsites.com/">brutalist</a> websites out there I like to browse sometimes.
+        All the javascript and styles are injected straight into the page, meaning the only external dependencies are the images. 
+        Also, it's just one page! Nice and simple.
+      </p>
+      <p>
+        <a href="http://thecreak.net">Check it out live!</a>
+      </p>
+      <p>
+        <a href="http://github.com/mrkoreye/creak-website">Code Plz</a>
+      </p>
+      <p>
+        Technologies used: Javascript, Gulp, Amazon AWS (S3, Cloudfront, Route53), HTML, CSS
+      </p>
+    </div>
   </div>  
   <div class="project bach-snake">
     <span class="title">BACH SNAKE</span>
+    <div class="details">
+      <div class="close-details">&#x2715;</div>
+      <div class="details-title">BACH SNAKE</div>
+      <p>
+        Well, I'm not gonna lie. This one is pretty silly. I resurrected an old game of snake I made in 2013, refactored into ES6 land, added audio, and made it into a standalone 404 error page.
+        The goal of the game is to collect all of Bach's "lost notes" so you can help him write one of the solo violin sonatas.
+        One of the more fun parts was working with the Web Audio API to make a little synth that could read notes in the format 'Bb4-C4-D4' and translate it into tones.
+        This snake game is kind of tricky to get the hang of, especially on mobile. It has a little bit of that "it's hard so it's fun" thing that flappy bird had.
+        If you get all the notes, you get to hear the whole tune in glorious 8-bit (is that the right number?) tone!
+      </p>
+      <p>
+        <a href="http://korey.io/404.html">Check it out live!</a>
+      </p>
+      <p>
+        <a href="http://github.com/mrkoreye/snake">Code Plz</a>
+      </p>
+      <p>
+        Technologies used: Javascript (ES6), Gulp, Webpack, Babel, HTML, CSS
+      </p>
+    </div>
   </div>  
-  <div class="project">
+  <div class="project lyrical-miracle">
     <span class="title">LYRICAL MYRICAL</span>
+    <div class="details">
+      <div class="close-details">&#x2715;</div>
+      <div class="details-title">LYRICAL MIRACLE</div>
+      <p>
+        Lyrical Miracle was the first app I built after completing App Academy in September 2013. 
+        It is a clone of Rap Genius - a place where people can upload lyrics to songs and annotate them.
+        I haven't touched the code since 2013, and it currently lives on a free dyno tier on Heroku. 
+        Just a warning: free heroku tiers are super slow, so it might take a while to load if you check out the live site. 
+      </p>
+      <p>
+        <a href="http://lyricalmiracle.korey.io">Check it out live!</a>
+      </p>
+      <p>
+        <a href="http://github.com/mrkoreye/LyricalMiracle">Code Plz</a>
+      </p>
+      <p>
+        Technologies used: Ruby on Rails, Backbone.js, Bootstrap, jQuery, HTML, CSS
+      </p>
+      <div class="video-container">
+        <iframe 
+          class="video-element"
+          src="https://www.youtube.com/embed/Xd7d2RHRGcM?loop=1&rel=0"
+          frameborder="0" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
   </div>
 </div>
 <div class="contact-container block">
   <h3>Contact</h3>
   <div id="email-div"></div>
   <img src="/assets/images/rick-and-korey.jpg" />
+</div>
+<div id="geocities-self-destruct">
+  I'm bored, let's blow this joint up geocities style 😎
 </div>
