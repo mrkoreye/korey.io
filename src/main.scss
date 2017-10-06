@@ -1,3 +1,123 @@
 * {
   box-sizing: border-box;
 }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  max-width: 700px;
+  margin: 0 auto 20px;
+}
+
+.name {
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 40px;
+}
+
+.header-container {
+  margin: 0 30px 30px;
+  padding: 15px 0;
+}
+
+.bottom-border {
+  border-bottom: 3px solid #2196f3;
+}
+
+a {
+  text-decoration: underline;
+  color: #2196f3;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.block {
+  margin: 0 30px;
+  text-align: left;
+}
+
+.projects-container {
+  .project {
+    display: inline-block;
+    cursor: pointer;
+    height: 130px;
+    width: 100%;
+    border: 1px solid #eceff1;
+    margin: 0 10px 10px 0;
+    box-shadow: 2px 2px 7px -2px #cfd8dc;
+    vertical-align: bottom;
+    overflow: hidden;
+    background-color: white;
+    background-size: 130px 130px;
+    position: relative;
+    transition: border ease-in-out 100ms, width ease-in-out 300ms, height ease-in-out 300ms, background-color ease-in-out 100ms;
+
+    &:hover {
+      border-bottom: 3px solid #2196f3;
+    }
+
+    .image-container {
+      overflow: hidden;
+      width: 100%;
+      opacity: 1;
+      transition: opacity ease-in-out 300ms;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+
+    .title {
+      position: absolute;
+      padding: 5px;
+      display: inline;
+      bottom: 15px;
+      background: #2196f3;
+      color: white;
+      z-index: 1;
+      opacity: 1;
+      transition: opacity ease-in-out 300ms;
+    }
+
+    &.metronomnom {
+      background: linear-gradient(to right, rgba(255, 255, 255, 0.1), white), url('assets/images/metronomnom-back.png');
+    }
+
+    &.flower {
+      background: linear-gradient(to right, rgba(255, 255, 255, 0.1), white), url('assets/images/flower.jpg');
+    }
+
+    &.bach-snake {
+      background: linear-gradient(to right, rgba(255, 255, 255, 0.1), white), url('assets/images/bach-snake.png');
+    }
+
+    &.collective {
+      background: linear-gradient(to right, rgba(255, 255, 255, 0.1), white), url('assets/images/shopstyle-collective.png');
+    }
+
+    &.active {
+      width: 100%;
+      height: 400px;
+      background-color: #2196f3;
+
+      .image-container,
+      .title {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.contact-container {
+  #email-div {
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
